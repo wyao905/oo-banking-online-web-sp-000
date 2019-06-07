@@ -1,5 +1,3 @@
-
-require 'pry'
 class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
@@ -19,8 +17,7 @@ class BankAccount
   end
   
   def valid?
-    binding.pry
-    if status == "open"
+    if self.status == "open"
       true
     else
       false
