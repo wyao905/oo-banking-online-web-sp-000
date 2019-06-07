@@ -17,7 +17,7 @@ class BankAccount
   end
   
   def valid?
-    if status == "closed"
+    if status == "open"
       true
     else
       false
