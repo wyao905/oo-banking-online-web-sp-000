@@ -24,9 +24,9 @@ class Transfer
       if valid?
         receiver.deposit(amount)
         self.status = "complete"
+      else
+        return "Transaction rejected. Please check your account balance."
       end
-    else
-      return "Transaction rejected. Please check your account balance."
     end
   end
 end
