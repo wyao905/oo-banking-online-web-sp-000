@@ -17,7 +17,7 @@ class Transfer
   end
   
   def execute_transaction
-    if valid? == false
+    if sender.valid? == false
       return "Transaction rejected. Please check your account balance."
     elsif status == "pending"
       sender.deposit(-amount)
