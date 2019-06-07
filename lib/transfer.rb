@@ -20,7 +20,7 @@ class Transfer
   
   def execute_transaction
     binding.pry
-    if valid? == true
+    if valid?
       if status == "pending"
         sender.deposit(-amount)
         receiver.deposit(amount)
@@ -28,5 +28,6 @@ class Transfer
       end
     else
       return "Transaction rejected. Please check your account balance."
+    end
   end
 end
