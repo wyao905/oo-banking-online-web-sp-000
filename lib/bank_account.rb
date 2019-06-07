@@ -18,4 +18,5 @@ class BankAccount
   def update(s)
     binding.pry
     status = s
+  end
 end
