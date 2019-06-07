@@ -15,6 +15,6 @@ class BankAccount
     balance = balance + amount
   end
   
-  # def display_balance
+  # def dis
     
 end
