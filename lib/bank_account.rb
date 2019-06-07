@@ -8,6 +8,7 @@ class BankAccount
     @name = name
     @balance = 1000
     @status = "open"
+    binding.pry
   end
   
   def deposit(amount)
