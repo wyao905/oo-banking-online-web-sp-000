@@ -1,3 +1,5 @@
+require 'pry'
+
 class Transfer
   attr_accessor :sender, :receiver, :amount, :status
   
@@ -17,7 +19,8 @@ class Transfer
   end
   
   def execute_transaction
-    if sender.valid? == false
+    binding.pry
+    if valid? == false
       return "Transaction rejected. Please check your account balance."
     elsif status == "pending"
       sender.deposit(-amount)
