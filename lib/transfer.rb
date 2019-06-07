@@ -15,4 +15,7 @@ class Transfer
       false
     end
   end
+  
+  def execute_transaction
+    sender.ba
 end
