@@ -15,6 +15,7 @@ class BankAccount
     balance = balance + amount
   end
   
-  # def dis
-    
+  def update(s)
+    binding.pry
+    status = s
 end
