@@ -32,7 +32,7 @@ class Transfer
   end
   
   def reverse_transfer
-    if status == "pending"
+    if status == "complete"
       receiver.deposit(-amount)
       if valid?
         sender.deposit(amount)
