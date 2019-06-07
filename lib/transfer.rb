@@ -30,4 +30,17 @@ class Transfer
       end
     end
   end
+  
+  def reverse_transfer
+    if status == "pending"
+      receiver.deposit(-amount)
+      if valid?
+        sender.deposit(amount)
+        self.status = "complete"
+      else
+        self.status = "rejected"
+        return "Transaction rejected. Please check your account balance."
+      end
+    end
+  end
 end
