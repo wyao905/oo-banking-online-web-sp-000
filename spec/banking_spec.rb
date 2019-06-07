@@ -1,3 +1,4 @@
+require pry
 describe "BankAccount" do
 
   let(:avi) { BankAccount.new("Avi") }
@@ -27,6 +28,7 @@ describe "BankAccount" do
   describe '#deposit' do
     it "can deposit money into its account" do
       expect(avi.balance).to eq(1000)
+      binding.pry
       avi.deposit(1000)
       expect(avi.balance).to eq(2000)
     end
